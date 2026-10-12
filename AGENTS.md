@@ -29,6 +29,8 @@ New session, or resuming after a limit/compaction, read **in this order and stop
 | `PLAN.md` | Current task decomposed into verifiable steps | New task starts |
 | `PROGRESS.md` | `NEXT ACTION`, dead ends, append-only log | After **every** completed step |
 
+The user's **account rule 4** asks every project for "a checklist" and "the progress file". In a repo that uses this file, the checklist is `PLAN.md` and the progress file is `PROGRESS.md`. Keep no second checklist or progress file beside them. Where the account rule and this file differ on what those files hold, this file wins.
+
 **R4.** No task begins without a `PLAN.md`. If the user gives a task and `PLAN.md` is stale or absent, write the plan first and confirm it before writing code.
 **R5.** `PLAN.md` steps must each be completable in one sitting and carry an objective verification (a command, an exit code, an observable). "Refactor the auth layer" is not a step. "Extract `verifyToken` from `auth.ts:88-140` into `token.ts`; verify: `npm test auth` passes" is.
 **R6.** Tick the `PLAN.md` box and append the `PROGRESS.md` entry **in the same turn you finish the step**, before starting the next one. Never batch bookkeeping to the end — the end is exactly where sessions die.
